@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8" />
+        <title>simple-sse-nodejs-setup</title>
+        <script src="vendor/eventsource.min-yaffle.js"></script>
+    </head>
+
+    <body>
+        <script>
+            const fn = function (e) {
+                console.log(e.data);
+            };
+
+            const src = new EventSource("http://localhost:5000/sse", /* { withCredentials: true } */);
+            src.onmessage = fn;
+            // src1.close();
+
+            // src.addEventListener("add", function(e){
+            //     console.log(e.type);
+            // });
+        </script>
+    </body>
+
+</html>
