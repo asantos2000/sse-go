@@ -19,7 +19,6 @@ After running the frontend. You can send request to server or start or stop stre
 
 ![Screenshot](sc.png)
 
-
 ### What it does.
 Client sends the request to `/log` endpoint and every subscriber that is listening to the stream channel will receive message from server and frontend just displays the messages received from stream. 
 
